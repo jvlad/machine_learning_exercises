@@ -1,7 +1,18 @@
-Tue Oct 31 20:06:00 EDT 2023
------------------------------
 
-Section 1: Welcome to the course! Here we will help you get started
+## Exercises location
+[./src](./src)
+
+## Notes  
+1. Feature scaling should be applied after the train/test data split to prevent data leakage from the test set to train set.  
+
+2. No need to check for [linear regression assumptions] prior to trying out linear regression model. If some of the data doesn't have linear correlation, an LR model will just perform poorly compared to other models that we should try anyways.
+
+3. When presented with a task and a dataset, how do I choose which type of regression start applying?  
+
+    – Models of different types need to be tested and compared in terms of accuracy  
+
+## Course Curriculum  
+### Section 1: Welcome to the course! Here we will help you get started
                     in the best conditions.
 1. Welcome Challenge!
                 
@@ -9,14 +20,14 @@ Section 1: Welcome to the course! Here we will help you get started
                 
 3. Get all the Datasets, Codes and Slides here
                   
-4. How to use the ML A-Z folder &amp; Google
-                          Colab
-5. Installing R and R Studio (Mac, Linux &amp;
-                          Windows)
+4. How to use the ML A-Z folder Google Colab
+
+5. Installing R and R Studio (Mac, Linux  Windows)
+
 6. BONUS: Use ChatGPT to Boost your ML Skills
                   
-Section 2: -------------------- Part 1: Data Preprocessing
-                    --------------------
+### Section 2:  Part 1: Data Preprocessing
+                    
 7. Welcome to Part 1 - Data Preprocessing
                 
 8. The Machine Learning process
@@ -25,7 +36,7 @@ Section 2: -------------------- Part 1: Data Preprocessing
                           set
 10. Feature Scaling
                 
-Section 3: Data Preprocessing in Python
+### Section 3: Data Preprocessing in Python
           
 11. Getting Started - Step 1
                 
@@ -40,7 +51,7 @@ Section 3: Data Preprocessing in Python
 16. Importing the Dataset - Step 3
                 
 17. For Python learners, summary of Object-oriented programming:
-                          classes &amp; objects
+                          classes  objects
 Coding Exercise 1: Coding Exercise 1: Importing and Preprocessing
                             a Dataset for Machine Learning
 18. Taking care of Missing Data - Step 1
@@ -75,7 +86,7 @@ Coding Exercise 4: Coding Exercise 4: Dataset Splitting and Feature
                 
 Coding Exercise 5: Coding exercise 5: Feature scaling for Machine
                           Learning
-Section 4: Data Preprocessing in R
+### Section 4: Data Preprocessing in R
           
 30. Getting Started
                 
@@ -99,11 +110,11 @@ Section 4: Data Preprocessing in R
                 
 Quiz 1: Data Preprocessing Quiz
                 
-Section 5: -------------------- Part 2: Regression
-                    --------------------
+### Section 5:  Part 2: Regression
+                    
 40. Welcome to Part 2 - Regression
                 
-Section 6: Simple Linear Regression
+### Section 6: Simple Linear Regression
           
 41. Simple Linear Regression Intuition
                 
@@ -139,7 +150,7 @@ Section 6: Simple Linear Regression
                   
 Quiz 2: Simple Linear Regression Quiz
                 
-Section 7: Multiple Linear Regression
+### Section 7: Multiple Linear Regression
           
 57. Dataset + Business Problem Description
                   
@@ -193,7 +204,7 @@ Section 7: Multiple Linear Regression
                           Elimination
 Quiz 3: Multiple Linear Regression Quiz
                 
-Section 8: Polynomial Regression
+### Section 8: Polynomial Regression
           
 82. Polynomial Regression Intuition
                 
@@ -237,7 +248,7 @@ Section 8: Polynomial Regression
                 
 Quiz 4: Polynomial Regression Quiz
                 
-Section 9: Support Vector Regression (SVR)
+### Section 9: Support Vector Regression (SVR)
             
 102. SVR Intuition (Updated!)
                 
@@ -267,7 +278,7 @@ Section 9: Support Vector Regression (SVR)
                 
 Quiz 5: SVR Quiz
                 
-Section 10: Decision Tree Regression
+### Section 10: Decision Tree Regression
           
 115. Decision Tree Regression Intuition
                 
@@ -291,7 +302,7 @@ Section 10: Decision Tree Regression
                   
 Quiz 6: Decision Tree Regression Quiz
                 
-Section 11: Random Forest Regression
+### Section 11: Random Forest Regression
           
 125. Random Forest Regression Intuition
                 
@@ -307,7 +318,7 @@ Section 11: Random Forest Regression
                   
 Quiz 7: Random Forest Regression Quiz
                 
-Section 12: Evaluating Regression Models
+### Section 12: Evaluating Regression Models
                     Performance
 131. R-Squared Intuition
                 
@@ -315,7 +326,7 @@ Section 12: Evaluating Regression Models
                 
 Quiz 8: Evaluating Regression Models Performance
                           Quiz
-Section 13: Regression Model Selection in
+### Section 13: Regression Model Selection in
                     Python
 133. Make sure you have this Model Selection folder
                           ready
@@ -333,7 +344,7 @@ Section 13: Regression Model Selection in
                             IN ACTION! - STEP 2
 140. Conclusion of Part 2 - Regression
                 
-Section 14: Regression Model Selection in R
+### Section 14: Regression Model Selection in R
             
 141. Evaluating Regression Models Performance - Homework's Final
                           Part
@@ -341,13 +352,13 @@ Section 14: Regression Model Selection in R
                           Coefficients
 143. Conclusion of Part 2 - Regression
                 
-Section 15: -------------------- Part 3: Classification
-                    --------------------
+### Section 15:  Part 3: Classification
+                    
 144. Welcome to Part 3 - Classification
                 
 145. What is Classification?
                 
-Section 16: Logistic Regression
+### Section 16: Logistic Regression
           
 146. Logistic Regression Intuition
                 
@@ -409,7 +420,7 @@ Quiz 9: Logistic Regression Quiz
                 
 174. EXTRA CONTENT: Logistic Regression Practical Case
                           Study
-Section 17: K-Nearest Neighbors (K-NN)
+### Section 17: K-Nearest Neighbors (K-NN)
           
 175. K-Nearest Neighbor Intuition
                 
@@ -427,7 +438,7 @@ Section 17: K-Nearest Neighbors (K-NN)
                 
 Quiz 10: K-Nearest Neighbor Quiz
                 
-Section 18: Support Vector Machine (SVM)
+### Section 18: Support Vector Machine (SVM)
           
 182. SVM Intuition
                 
@@ -443,7 +454,7 @@ Section 18: Support Vector Machine (SVM)
                 
 Quiz 11: SVM Quiz
                 
-Section 19: Kernel SVM
+### Section 19: Kernel SVM
           
 188. Kernel SVM Intuition
                 
@@ -467,7 +478,7 @@ Section 19: Kernel SVM
                 
 Quiz 12: Kernel SVM Quiz
                 
-Section 20: Naive Bayes
+### Section 20: Naive Bayes
           
 198. Bayes Theorem
                 
@@ -491,7 +502,7 @@ Section 20: Naive Bayes
                 
 Quiz 13: Naive Bayes Quiz
                 
-Section 21: Decision Tree Classification
+### Section 21: Decision Tree Classification
           
 208. Decision Tree Classification Intuition
                   
@@ -507,7 +518,7 @@ Section 21: Decision Tree Classification
                   
 Quiz 14: Decision Tree Classification Quiz
                   
-Section 22: Random Forest Classification
+### Section 22: Random Forest Classification
           
 214. Random Forest Classification Intuition
                   
@@ -523,11 +534,11 @@ Section 22: Random Forest Classification
                   
 Quiz 15: Random Forest Classification Quiz
                   
-Section 23: Classification Model Selection in
+### Section 23: Classification Model Selection in
                     Python
 220. Make sure you have this Model Selection folder
                           ready
-221. Confusion Matrix &amp; Accuracy Ratios
+221. Confusion Matrix  Accuracy Ratios
                   
 222. ULTIMATE DEMO OF THE POWERFUL CLASSIFICATION CODE TEMPLATES
                             IN ACTION - STEP 1
@@ -537,9 +548,9 @@ Section 23: Classification Model Selection in
                             IN ACTION - STEP 3
 225. ULTIMATE DEMO OF THE POWERFUL CLASSIFICATION CODE TEMPLATES
                             IN ACTION - STEP 4
-Section 24: Evaluating Classification Models
+### Section 24: Evaluating Classification Models
                     Performance
-226. False Positives &amp; False Negatives
+226. False Positives  False Negatives
                   
 227. Accuracy Paradox
                 
@@ -551,11 +562,11 @@ Section 24: Evaluating Classification Models
                   
 Quiz 16: Evaluating Classiification Model Performance
                           Quiz
-Section 25: -------------------- Part 4: Clustering
-                    --------------------
+### Section 25:  Part 4: Clustering
+                    
 231. Welcome to Part 4 - Clustering
                 
-Section 26: K-Means Clustering
+### Section 26: K-Means Clustering
           
 232. What is Clustering? (Supervised vs Unsupervised
                           Learning)
@@ -593,7 +604,7 @@ Section 26: K-Means Clustering
                 
 Quiz 17: K-Means Clustering Quiz
                 
-Section 27: Hierarchical Clustering
+### Section 27: Hierarchical Clustering
           
 249. Hierarchical Clustering Intuition
                 
@@ -627,11 +638,11 @@ Quiz 18: Hierarchical Clustering Quiz
                 
 263. Conclusion of Part 4 - Clustering
                 
-Section 28: -------------------- Part 5: Association Rule Learning
-                    --------------------
+### Section 28:  Part 5: Association Rule Learning
+                    
 264. Welcome to Part 5 - Association Rule
                           Learning
-Section 29: Apriori
+### Section 29: Apriori
           
 265. Apriori Intuition
                 
@@ -651,7 +662,7 @@ Section 29: Apriori
                 
 Quiz 19: Apriori Quiz
                 
-Section 30: Eclat
+### Section 30: Eclat
           
 273. Eclat Intuition
                 
@@ -661,11 +672,11 @@ Section 30: Eclat
                 
 Quiz 20: Eclat Quiz
                 
-Section 31: -------------------- Part 6: Reinforcement Learning
-                    --------------------
+### Section 31:  Part 6: Reinforcement Learning
+                    
 276. Welcome to Part 6 - Reinforcement Learning
                   
-Section 32: Upper Confidence Bound (UCB)
+### Section 32: Upper Confidence Bound (UCB)
           
 277. The Multi-Armed Bandit Problem
                 
@@ -695,7 +706,7 @@ Section 32: Upper Confidence Bound (UCB)
                 
 Quiz 21: Upper Confidence Bound Quiz
                 
-Section 33: Thompson Sampling
+### Section 33: Thompson Sampling
           
 290. Thompson Sampling Intuition
                 
@@ -717,8 +728,8 @@ Section 33: Thompson Sampling
                 
 Quiz 22: Thompson Sampling Quiz
                 
-Section 34: -------------------- Part 7: Natural Language Processing
-                    --------------------
+### Section 34:  Part 7: Natural Language Processing
+                    
 299. Welcome to Part 7 - Natural Language
                           Processing
 300. NLP Intuition
@@ -771,15 +782,15 @@ Section 34: -------------------- Part 7: Natural Language Processing
                 
 Quiz 23: Natural Language Processing Quiz
                 
-Section 35: -------------------- Part 8: Deep Learning
-                    --------------------
+### Section 35:  Part 8: Deep Learning
+                    
 324. Welcome to Part 8 - Deep Learning
                 
 325. What is Deep Learning?
                 
 Quiz 24: Deep Learning Quiz
                 
-Section 36: Artificial Neural Networks
+### Section 36: Artificial Neural Networks
           
 326. Plan of attack
                 
@@ -823,7 +834,7 @@ Section 36: Artificial Neural Networks
                 
 Quiz 25: ANN QUIZ
                 
-Section 37: Convolutional Neural Networks
+### Section 37: Convolutional Neural Networks
             
 346. Plan of attack
                 
@@ -841,7 +852,7 @@ Section 37: Convolutional Neural Networks
                 
 353. Summary
                 
-354. Softmax &amp; Cross-Entropy
+354. Softmax  Cross-Entropy
                 
 355. CNN in Python - Step 1
                 
@@ -859,11 +870,11 @@ Section 37: Convolutional Neural Networks
                 
 Quiz 26: CNN Quiz
                 
-Section 38: -------------------- Part 9: Dimensionality Reduction
-                    --------------------
+### Section 38:  Part 9: Dimensionality Reduction
+                    
 362. Welcome to Part 9 - Dimensionality
                           Reduction
-Section 39: Principal Component Analysis (PCA)
+### Section 39: Principal Component Analysis (PCA)
             
 363. Principal Component Analysis (PCA)
                           Intuition
@@ -879,7 +890,7 @@ Section 39: Principal Component Analysis (PCA)
                 
 Quiz 27: PCA Quiz
                 
-Section 40: Linear Discriminant Analysis (LDA)
+### Section 40: Linear Discriminant Analysis (LDA)
             
 369. Linear Discriminant Analysis (LDA)
                           Intuition
@@ -889,17 +900,17 @@ Section 40: Linear Discriminant Analysis (LDA)
                 
 Quiz 28: LDA Quiz
                 
-Section 41: Kernel PCA
+### Section 41: Kernel PCA
           
 372. Kernel PCA in Python
                 
 373. Kernel PCA in R
                 
-Section 42: -------------------- Part 10: Model Selection &amp;
-                    Boosting --------------------
-374. Welcome to Part 10 - Model Selection &amp;
+### Section 42:  Part 10: Model Selection 
+                    Boosting 
+374. Welcome to Part 10 - Model Selection 
                           Boosting
-Section 43: Model Selection
+### Section 43: Model Selection
           
 375. k-Fold Cross Validation in Python
                 
@@ -909,7 +920,7 @@ Section 43: Model Selection
                 
 378. Grid Search in R
                 
-Section 44: XGBoost
+### Section 44: XGBoost
           
 379. XGBoost in Python
                 
@@ -917,11 +928,7 @@ Section 44: XGBoost
                           Content
 381. XGBoost in R
                 
-Section 45: Annex: Logistic Regression (Long
+### Section 45: Annex: Logistic Regression (Long
                     Explanation)
 382. Logistic Regression Intuition
                 
-Section 46: Congratulations!! Don't forget your Bonus
-                    :)
-383. Huge Congrats for completing the
-                          challenge!

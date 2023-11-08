@@ -35,7 +35,7 @@ https://youtu.be/LZzq1zSL1bs?t=3865
   1. all-in (not recommended unless it's a preparation step for Backward Elimination)
 
   2. Backward Elimination (an instance of Stepwise regression)
-    one-by-one exclude all the variables which P-value is bigger than arbitrary picked significance level. E. g. SL = 0.05. Excluding variables with a high P-value means that we excluding the variables changing which doesn't affect the system. I. e. the observed system behavior is highly probably to occur regardless of those variables.  
+    one-by-one exclude all the variables which P-value is bigger than arbitrary picked significance level. E. g. SL = 0.05. Excluding variables with a high P-value means that we excluding the variables changing which doesn't affect the system. I. e. the observed system behavior is highly probably to occur regardless of those variables. 
 
   3. Forward selection (an instance of Stepwise regression)
     Building simple linear regressions using separately each of the independent variables. Out of those n [simple linear regression] models, choose one model – x_i model – with the lowest P-value (where P should also be lower than SL).  
