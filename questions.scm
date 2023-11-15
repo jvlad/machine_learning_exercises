@@ -6,3 +6,7 @@
 
     https://www.linkedin.com/posts/vladzams_datascience-activity-7129966707267301376-XQ_E?utm_source=share&utm_medium=member_desktop
 ]
+
+[Do we need to scale target variable?  
+  opinions are controversial, need to explore further  
+]
