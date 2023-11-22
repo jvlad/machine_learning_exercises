@@ -4,12 +4,11 @@
 Logistic regression
 
 Resources:  
-https://www.superdatascience.com/pages/machine-learning
 https://drive.google.com/drive/folders/1OFNnrHRZPZ3unWdErjLHod8Ibv2FfG1d  
-https://drive.google.com/drive/u/2/folders/1OFNnrHRZPZ3unWdErjLHod8Ibv2FfG1d
+https://drive.google.com/drive/folders/16s9Obk1t_4Iaa2EBzgh0MQADOK6ReCst
+https://www.superdatascience.com/pages/machine-learning
 
 382 – total lectures
- – completed by ## Wed, Aug 9, 6:11:13 PM 20230809-2311
 
 ## General Setup
 
