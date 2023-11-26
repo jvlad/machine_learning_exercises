@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
+from sklearn.metrics import confusion_matrix, accuracy_score
+
 
 def adjusted_r_squared(r_squared: float, X: np.ndarray) -> float:
   """
@@ -31,11 +33,20 @@ def plot_meshgrid(X_set, y_set, classifier, scalerX, step=0.25,
   plt.xlim(X1.min(), X1.max())
   plt.ylim(X2.min(), X2.max())
   for i, j in enumerate(np.unique(y_set)):
-      plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1], c=ListedColormap(('salmon', 'dodgerblue'))(i), label=j)
+      plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
+                  c=ListedColormap(('salmon', 'dodgerblue'))(i), label=j)
 
   plt.title(f'{title}')
   plt.xlabel(f'{x1_label}')
   plt.ylabel(f'{x2_label}')
   plt.legend()
   plt.show()
+  return
+
+
+def accuracy_and_confusion(actual, predicted):
+  cm = confusion_matrix(actual, predicted)
+  acsc = accuracy_score(actual, predicted)
+  print(cm)
+  print(acsc)
   return
