@@ -1,3 +1,4 @@
+from __future__ import annotations
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
@@ -44,9 +45,9 @@ def plot_meshgrid(X_set, y_set, classifier, scalerX, step=0.25,
   return
 
 
-def accuracy_and_confusion(actual, predicted):
+def accuracy_and_confusion(actual: np.ndarray, predicted: np.ndarray) -> Tuple[np.ndarray, float]:
   cm = confusion_matrix(actual, predicted)
   acsc = accuracy_score(actual, predicted)
-  print(cm)
-  print(acsc)
-  return
+  # print(cm)
+  # print(acsc)
+  return (cm, acsc)
