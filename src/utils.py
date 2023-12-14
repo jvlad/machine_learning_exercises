@@ -48,6 +48,4 @@ def plot_meshgrid(X_set, y_set, classifier, scalerX, step=0.25,
 def accuracy_and_confusion(actual: np.ndarray, predicted: np.ndarray) -> Tuple[np.ndarray, float]:
   cm = confusion_matrix(actual, predicted)
   acsc = accuracy_score(actual, predicted)
-  # print(cm)
-  # print(acsc)
   return (cm, acsc)

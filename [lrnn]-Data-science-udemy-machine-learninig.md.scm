@@ -1,5 +1,18 @@
 ## Thu, Jul 20, 11:45:01 PM 20230721-0445
 
+[Questions
+  [Picking performance evaluation metric for regression model. 
+    When you use a regression model, do you follow any formal approach for picking a performance evaluation metric (or a combination of them)?  
+
+    ...MAE/MAPE, MSE, RMSE, R-squared, Adjusted R-squared – I've read through a number of overviews, all are "the best". However, I started wondering if choosing it is a matter of consensus like "use whatever my fellows used".
+
+    https://www.linkedin.com/posts/vladzams_datascience-activity-7129966707267301376-XQ_E?utm_source=share&utm_medium=member_desktop]
+
+  [Do we need to scale target variable?  
+    opinions are controversial, need to explore further  
+  ]
+]
+
 ## Statistical Models 
 Logistic regression
 
@@ -23,29 +36,6 @@ scikit-learn - lib for data transformation
 ## Statistics Course (Krish Naik)
 https://youtu.be/LZzq1zSL1bs?t=3865
 
-
-[Code Samples
-  in [ML_Toolkit_Reference.ipynb]
-]
-
-[[] Prediction error types
-  False positive - Type 1 error
-  False negative - Type 2 error
-]
-
-[[] Ensemble learning – a compound method – a one that combines few other ML methods. Or, sometimes, the same method applied multiple times (e. g. random forest)
-]
-
-[[] Random Forest
-  1. Pick at random K data points from the Training set.
-  2. Build the Decision Tree associated to these K data points.
-  3. Choose the number Ntree of trees you want to build and repeat STEPS 1 & 2
-  4. For a new data point, make each one of your Ntree trees predict the category to which the data points belongs, and assign the new data point to the category that wins the majority vote.
-]
-
-[[] Evaluating performance of classification models
-  accuracy ratio should not be used as the only indicator due to possible Accuracy Paradox. CAP (Cumulative Accuracy Profile)
-]
 
 [Building a multiple linear regression model  
   We need to pick which independent variables out of those that we have we're going to take into account
@@ -77,3 +67,23 @@ https://youtu.be/LZzq1zSL1bs?t=3865
     Construct all possible models, pick the one with the best criterion  
   ]
 ]
+
+[[] Prediction error types
+  False positive - Type 1 error
+  False negative - Type 2 error
+]
+
+[[] Ensemble learning – a compound method – a one that combines few other ML methods. Or, sometimes, the same method applied multiple times (e. g. random forest)
+]
+
+[[] Random Forest
+  1. Pick at random K data points from the Training set.
+  2. Build the Decision Tree associated to these K data points.
+  3. Choose the number Ntree of trees you want to build and repeat STEPS 1 & 2
+  4. For a new data point, make each one of your Ntree trees predict the category to which the data points belongs, and assign the new data point to the category that wins the majority vote.
+]
+
+[[] Evaluating performance of classification models
+  accuracy ratio should not be used as the only indicator due to possible Accuracy Paradox. CAP (Cumulative Accuracy Profile)
+]
+
