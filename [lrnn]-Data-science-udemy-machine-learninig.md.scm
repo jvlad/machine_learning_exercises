@@ -13,6 +13,11 @@
   ]
 ]
 
+[Clustering
+  [Ward method – a way to minimize the variance within the clusters. Was used together with hierarchical clustering  
+  ]
+]
+
 ## Statistical Models 
 Logistic regression
 
