@@ -14,7 +14,14 @@
 ]
 
 [Clustering
-  [Ward method – a way to minimize the variance within the clusters. Was used together with hierarchical clustering  
+  [hierarchical
+    [Ward method – a way to minimize the variance within the clusters. Was used together with hierarchical clustering
+    ]
+  ]
+  
+  ['SciPy Hierarchical Clustering and Dendrogram Tutorial'  
+    Thu Dec 14 01:01:59 EST 2023  
+    https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/
   ]
 ]
 
