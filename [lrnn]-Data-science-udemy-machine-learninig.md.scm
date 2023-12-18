@@ -14,14 +14,26 @@
 ]
 
 [Clustering
-  [hierarchical
+  [Hierarchical
     [Ward method – a way to minimize the variance within the clusters. Was used together with hierarchical clustering
     ]
+
+    [2 types exist: Divisive and Agglomerative]
+
+    [Pros: The optimal number of clusters can be obtained by the model itself, practical visualisation with the dendrogram
+      
+      Cons: Not appropriate for large datasets
+    ]
+
+    ['SciPy Hierarchical Clustering and Dendrogram Tutorial'  
+      Thu Dec 14 01:01:59 EST 2023  
+      https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/
+    ]
   ]
-  
-  ['SciPy Hierarchical Clustering and Dendrogram Tutorial'  
-    Thu Dec 14 01:01:59 EST 2023  
-    https://joernhees.de/blog/2015/08/26/scipy-hierarchical-clustering-and-dendrogram-tutorial/
+
+  [K-Means
+    Pros: Simple to understand, easily adaptable, works well on small or large datasets, fast, efficient and performant
+    Const: Need to choose the number of clusters (elbow method)
   ]
 ]
 
