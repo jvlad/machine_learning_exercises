@@ -13,6 +13,15 @@
   ]
 ]
 
+[Apriori algorithm
+  Generally there is no point in selecting a base product that has a low support itself (e. g. 5-10%). Yet, technically there is no problem in doing so if we have computation resources.  
+
+  sort all the found rules by the lift DESC  
+  [lift (i1 -> i2) = confidence(i1 -> i2) / support (i2), 
+    where i2 is the item that interest us, and i1 – the base item]
+  The higher the lift, the better chances that recommending i2 when there was i1 selected by user, will lead users' attention to i2  
+]
+
 [Clustering
   [Hierarchical
     [Ward method – a way to minimize the variance within the clusters. Was used together with hierarchical clustering
