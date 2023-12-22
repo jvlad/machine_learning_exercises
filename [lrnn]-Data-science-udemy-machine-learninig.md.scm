@@ -16,10 +16,15 @@
 [Apriori algorithm
   Generally there is no point in selecting a base product that has a low support itself (e. g. 5-10%). Yet, technically there is no problem in doing so if we have computation resources.  
 
-  sort all the found rules by the lift DESC  
+  [Algorithm
+    sort all the found rules by the lift DESC  
+    The higher the lift, the better chances that recommending i2 when there was i1 selected by user, will lead users' attention to i2  
+  ]
+  
+  [support(i) = len(transactions with product i) / count(all items)]
+  [confidence(i1 -> i2) = len(transactions with both product i1 and i2) / len(transactions with product i1)]
   [lift (i1 -> i2) = confidence(i1 -> i2) / support (i2), 
     where i2 is the item that interest us, and i1 – the base item]
-  The higher the lift, the better chances that recommending i2 when there was i1 selected by user, will lead users' attention to i2  
 ]
 
 [Clustering
