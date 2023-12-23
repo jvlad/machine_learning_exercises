@@ -21,10 +21,18 @@
     The higher the lift, the better chances that recommending i2 when there was i1 selected by user, will lead users' attention to i2  
   ]
   
-  [support(i) = len(transactions with product i) / count(all items)]
+  [support(i) = len(transactions with product i) / count(all transactions)]
   [confidence(i1 -> i2) = len(transactions with both product i1 and i2) / len(transactions with product i1)]
   [lift (i1 -> i2) = confidence(i1 -> i2) / support (i2), 
     where i2 is the item that interest us, and i1 – the base item]
+]
+
+[Eclat algorithm
+  Look at the support metric for sets of consumed itesm (as opposed to individual items)
+  set should have 2 items or more  
+  support(set1) = len(transactions containing set1) / count(all transactions)
+
+  Sort results by the support value. The set with the highest support are reasonable associations  
 ]
 
 [Clustering
