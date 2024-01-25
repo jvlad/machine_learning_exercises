@@ -21,6 +21,8 @@ import pickle
 import torchvision
 import numpy as np
 import json
+from typing import TypeVar
+import uuid
 
 from haven import haven_results as hr
 from haven import haven_utils as hu
@@ -35,6 +37,48 @@ def get_model(exp_dict):
     opt = torch.optim.Adam(model.parameters(), lr=exp_dict["lr"])
 
     return model, opt
+
+Experiment = TypeVar("Experiment", dict)
+
+def get_experiment_artifacts_dir(experiment_dict_with_id, base_dir: str = None):  
+    """
+    Encapsulate mapping [experiment_dict] to a path in an external file storage
+    """
+    if not isExperimentIdAssigned(experiment_dict_with_id):
+        raise ValueError(f"Experiment id is not assigned for the experiment: {experiment_dict_with_id}")
+    convenient_dir_name = get_experiment_id(experiment_dict_with_id)
+    return os.path.join(base_dir, convenient_dir_name)
+
+def assignId(experiment_dict: Experiment) -> Experiment:
+    """
+    Encapsulates how we assign id to an experiment, returns a new instance to ensure 
+    immutability (save a caller-side from unexpected changes to the 
+    existing variables)
+    """
+    if not isExperimentIdAssigned(experiment_dict):
+        experiment_dict = copyExperiment(experiment_dict)
+        experiment_dict["id"] = uuid.uuid4()
+        # experiment_dict["id"] = hu.hash_dict(experiment_dict)
+    return experiment_dict
+
+def isExperimentIdAssigned(exp_dict: Experiment) -> bool:
+    return get_experiment_id(exp_dict) != None
+
+def get_experiment_id(exp_dict: Experiment) -> str | None:
+    """
+    Encapsulates retrieving the experiment id from [exp_dict] for easier adaptation to a change
+    of the data structure of the exp_dict (if needed in the future). If the code were written 
+    in an OOP style, this function would be a part of Experiment class.
+    """
+    return exp_dict.get("id", None)
+
+def copyExperiment(experiment_dict: Experiment) -> Experiment:
+    """
+    Encapsulates how we copy an experiment for easier adaptation to a change
+    of the data structure of the exp_dict (if needed in the future). If the code were written 
+    in an OOP style, this function would be a part of Experiment class.
+    """
+    return experiment_dict.copy()
 
 def get_loader(exp_dict):
     dataset_name = exp_dict['dataset']
@@ -109,7 +153,7 @@ def get_score_data(exp_list, savedir_base):
 
   # Load data from each directory and append it to the list
   for exp_dict in exp_list:
-      score_data.append(load_data_from_directory(os.path.join(savedir_base, hu.hash_dict(exp_dict))))
+      score_data.append(load_data_from_directory(get_experiment_artifacts_dir(exp_dict, savedir_base)))
 
   return score_data
 
@@ -144,14 +188,14 @@ def get_score_dataframe(exp_list, savedir_base):
 
 # %%
 # Define Training Validation Procedure
-def trainval(exp_dict, savedir, args):
+def trainval(exp_dict, experiment_artifacts_dir, args):
     """
     exp_dict: dictionary defining the hyperparameters of the experiment
     savedir: the directory where the experiment will be saved
     args: arguments passed through the command line
     """
     print(exp_dict)
-    save_json(os.path.join(savedir, "exp_dict.json"), exp_dict)
+    save_json(os.path.join(experiment_artifacts_dir, "exp_dict.json"), exp_dict)
 
     # Get MNIST dataset
     train_loader = get_loader(exp_dict)
@@ -176,7 +220,7 @@ def trainval(exp_dict, savedir, args):
         score_list += [score_dict]
 
         # Save pickle
-        save_pkl(os.path.join(savedir, "score_list.pkl"), score_list)
+        save_pkl(os.path.join(experiment_artifacts_dir, "score_list.pkl"), score_list)
 
         # Print Metrics
         print(pd.DataFrame(score_list).tail())
@@ -187,13 +231,16 @@ if __name__ == '__main__':
     # Define a list of experiments
     exp_list = []
     for lr in [1e-2, 1e-3, 1e-5]:
-        exp_list += [{'lr':lr, 'dataset':'cifar', 'model':'linear'}]
+        experiment = [{'lr':lr, 'dataset':'cifar', 'model':'linear'}]
+        experiment_with_id = assignId(experiment)
+        exp_list += experiment_with_id
 
-    savedir_base = "results"
+    artifacts_base_path = "results"
 
     # Launch experiments using the trainval function
     for exp_dict in exp_list:
-      trainval(exp_dict, os.path.join(savedir_base, hu.hash_dict(exp_dict)), None)
+        experiment_artifacts_dir = get_experiment_artifacts_dir(exp_dict, artifacts_base_path)
+        trainval(exp_dict, experiment_artifacts_dir, None)
 
 # %%
 
