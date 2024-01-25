@@ -3,7 +3,7 @@
 [./src](./src)
 
 ## Notes  
-1. Feature scaling should be applied after the train/test data split to prevent data leakage from the test set to train set.  
+1. Feature scaling should be applied after the train/test data split to prevent data leakage from a validation set to a train set.  
 
 2. No need to check for [linear regression assumptions] prior to trying out linear regression model. If some of the data doesn't have linear correlation, an LR model will just perform poorly compared to other models that we should try anyways.
 
